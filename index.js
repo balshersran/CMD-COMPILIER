@@ -3,7 +3,6 @@ import inquirer from "inquirer";
 import fs from 'fs';
 
 // TODO: Create an array of questions for user input
-inquirer
 
 const questions = [
     {
@@ -36,7 +35,14 @@ console.log(questions);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    fileName = questions.title;
+    inquirer
+    .prompt([{questions}])
+    .then((data) => 
+    fs.writeFile(`${fileName}.md`, JSON.stringify(data , null, '\t'), (err) =>
+        err ? console.error(err) : console.log('Success!')
+      )
+    );
 }
 
 // TODO: Create a function to initialize app
