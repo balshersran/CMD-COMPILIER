@@ -18,7 +18,7 @@
 
 ## Credits
 
-- As far as 'credits' go, I would like to acknowledge my istructor "Byran Swarthout" and my TA "Shawn Tscheope" for their outstanding knowledge in this
+- As far as credits go, I would like to acknowledge my istructor "Byran Swarthout" and my TA "Shawn Tscheope" for their outstanding knowledge in this subject and guiding me through it. 
 
 ## License
 
