@@ -22,4 +22,4 @@
 
 ## License
 
-- See the license for yourself
+- The licensing details are on the repository. 
