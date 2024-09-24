@@ -12,6 +12,11 @@ const questions = [
         message: 'What would you like to title your README?',
     },
     {
+        name: 'installation',
+        type: 'input',
+        message: 'How do you install this project?',
+    },
+    {
         name: 'description',
         type: 'input',
         message: 'Describe your project.',
