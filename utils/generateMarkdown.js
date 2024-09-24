@@ -8,14 +8,13 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license === 'ISC') {
-    return `![GitHub License](https://img.shields.io/github/license/:user/:repo)
-`
+    return `![License](https://opensource.org/licenses/${license})`;
   } else if(license === 'MIT') {
-    
+    return `![License](https://opensource.org/licenses/${license})`;
   } else if(license === 'POSTgreSQL') {
-    
-  }else if(license === 'GPL') {
-    
+    return `![License](https://opensource.org/licenses/${license})`;
+  }else if(license === 'Apache-2.0') {
+    return `![License](https://opensource.org/licenses/${license})`;
   } else {
     return '';
   }
@@ -33,7 +32,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-
+  
 `;
 }
 

@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
 import fs from 'fs';
-import generateMarkdown from "./utils/generateMarkdown";
+import generateMarkdown from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 
@@ -30,7 +30,7 @@ const questions = [
         name: 'license',
         type: 'lists',
         message: 'What licenses were used for this project?',
-        choices: ['ISC', 'MIT', 'POSTgreSQL', 'GPL'],
+        choices: ['ISC', 'MIT', 'POSTgreSQL', 'Apache-2.0'],
     },
 ];
 console.log(questions);
