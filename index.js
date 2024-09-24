@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
 import fs from 'fs';
-import generateMarkdown from "./utils/generateMarkdown.js";
+import generateMarkdown from './utils/generateMarkdown.js';
 
 // TODO: Create an array of questions for user input
 
@@ -33,7 +33,7 @@ const questions = [
     },
     {
         name: 'license',
-        type: 'lists',
+        type: 'list',
         message: 'What licenses were used for this project?',
         choices: ['ISC', 'MIT', 'POSTgreSQL', 'Apache-2.0'],
     },
@@ -41,8 +41,8 @@ const questions = [
 console.log(questions);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fileName = questions.title;
+function writeToFile(data) {
+    const fileName = data.title
     fs.writeFile(`${fileName}.md`, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log('Success!')
     )
@@ -50,9 +50,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
-    .prompt([{questions}])
-    .then(writeToFile())
+    inquirer.prompt(questions)
+    .then( data => writeToFile(data))
 }
 
 // Function call to initialize app
