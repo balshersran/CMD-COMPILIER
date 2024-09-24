@@ -35,7 +35,7 @@ const questions = [
         name: 'license',
         type: 'list',
         message: 'What licenses were used for this project?',
-        choices: ['ISC', 'MIT', 'POSTgreSQL', 'Apache-2.0'],
+        choices: ['ISC', 'MIT', 'Apache-2.0'],
     },
 ];
 console.log(questions);
@@ -50,8 +50,9 @@ function writeToFile(data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions)
-    .then( data => writeToFile(data))
+    inquirer
+    .prompt(questions)
+    .then(data => writeToFile(data))
 }
 
 // Function call to initialize app

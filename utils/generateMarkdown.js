@@ -1,6 +1,13 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  if(license === 'ISC') {
+    return '![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)';
+  } else if(license === 'MIT') {
+    return '![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)';
+  } else if(license === 'Apache-2.0') {
+    return '![GitHub license](https://img.shields.io/badge/license-Apache-2.0-red.svg)';
+  }
   return renderLicenseLink(license);
 }
 
@@ -11,9 +18,7 @@ function renderLicenseLink(license) {
     return `![License](https://opensource.org/licenses/${license})`;
   } else if(license === 'MIT') {
     return `![License](https://opensource.org/licenses/${license})`;
-  } else if(license === 'POSTgreSQL') {
-    return `![License](https://opensource.org/licenses/${license})`;
-  }else if(license === 'Apache-2.0') {
+  } else if(license === 'Apache-2.0') {
     return `![License](https://opensource.org/licenses/${license})`;
   } else {
     return '';
