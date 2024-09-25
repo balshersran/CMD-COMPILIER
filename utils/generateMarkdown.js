@@ -14,11 +14,11 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "ISC") {
+  if (data.license === "ISC") {
     return `![License](https://opensource.org/licenses/${license})`;
-  } else if (license === "MIT") {
+  } else if (data.license === "MIT") {
     return `![License](https://opensource.org/licenses/${license})`;
-  } else if (license === "Apache-2.0") {
+  } else if (data.license === "Apache-2.0") {
     return `![License](https://opensource.org/licenses/${license})`;
   } else {
     return "";
