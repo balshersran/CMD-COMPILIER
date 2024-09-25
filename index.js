@@ -2,6 +2,7 @@
 import inquirer from "inquirer";
 import fs from 'fs';
 import generateMarkdown from './utils/generateMarkdown.js';
+import { type } from "os";
 
 // TODO: Create an array of questions for user input
 
@@ -32,13 +33,22 @@ const questions = [
         message: 'Take a moment to Credit the authors or document sites used for this project.',
     },
     {
+        name: 'github',
+        type: 'input',
+        message: 'Please provide your GitHub name for people to reach out too for any questions.'
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: 'Please provide an email for anyone to reachout to for any questions.'
+    },
+    {
         name: 'license',
         type: 'list',
         message: 'What licenses were used for this project?',
         choices: ['ISC', 'MIT', 'Apache-2.0'],
     },
 ];
-console.log(questions);
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
